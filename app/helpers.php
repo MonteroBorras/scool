@@ -871,9 +871,9 @@ if (!function_exists('initialize_janitors')) {
 if (!function_exists('initialize_teachers')) {
     function initialize_teachers()
     {
-        User::createIfNotExists([
+              User::createIfNotExists([
             'name' => 'Dolors Sanjuan Aubà',
-            'code' => '02',
+            'code' => '002',
             'email' => 'dolorssanjuanauba@iesebre.com',
             'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
             'remember_token' => str_random(10),
@@ -889,6 +889,2085 @@ if (!function_exists('initialize_teachers')) {
                 'specialty_id' => Specialty::findByCode('CAS')->id,
                 'family_id' => Family::findByCode('CA')->id,
                 'code' => '002'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Nuria Bordes Vidal',
+            'code' => '028',
+            'email' => 'nbordes@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Nuria',
+            'sn1' => 'Bordes',
+            'sn2' => 'Vidal',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('524')->id,
+                'family_id' => Family::findByCode('ELECTRIC')->id,
+                'code' => '028'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Laura Llopis Lozano',
+            'code' => '029',
+            'email' => 'laurallopis@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Laura',
+            'sn1' => 'Llopis',
+            'sn2' => 'Lozano',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('525')->id,
+                'family_id' => Family::findByCode('ELECTRIC')->id,
+                'code' => '029'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Vicent	Favà Figueres',
+            'code' => '030',
+            'email' => 'vfava@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Vicent',
+            'sn1' => 'Favà',
+            'sn2' => 'Figueres',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('525')->id,
+                'family_id' => Family::findByCode('ELECTRIC')->id,
+                'code' => '030'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Agustí	Baubí	Rovira',
+            'code' => '031',
+            'email' => 'agustinbaubi@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Agustí',
+            'sn1' => 'Baubí',
+            'sn2' => 'Rovira',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('525')->id,
+                'family_id' => Family::findByCode('ELECTRIC')->id,
+                'code' => '031'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Josep Joan	Cid	Castella',
+            'code' => '116',
+            'email' => 'joancid1@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Josep Joan',
+            'sn1' => 'Cid',
+            'sn2' => 'Castellar',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('513')->id,
+                'family_id' => Family::findByCode('ELECTRIC')->id,
+                'code' => '116'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Rafel Puig	Rios',
+            'code' => '032',
+            'email' => 'rafelpuig@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Rafel',
+            'sn1' => 'Puig',
+            'sn2' => 'Rios',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('602')->id,
+                'family_id' => Family::findByCode('ELECTRIC')->id,
+                'code' => '032'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Laureà	Ferré	Menasanch',
+            'code' => '033',
+            'email' => 'lferre@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Laureà',
+            'sn1' => 'Ferré',
+            'sn2' => 'Menasanch',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('602')->id,
+                'family_id' => Family::findByCode('ELECTRIC')->id,
+                'code' => '033'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Manel Canalda Vidal',
+            'code' => '034',
+            'email' => 'manelcanalda@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Manel',
+            'sn1' => 'Canalda',
+            'sn2' => 'Vidal',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('605')->id,
+                'family_id' => Family::findByCode('ELECTRIC')->id,
+                'code' => '034'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Xavi	Bel	Fernández',
+            'code' => '035',
+            'email' => 'xbel@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Xavi',
+            'sn1' => 'Bel',
+            'sn2' => 'Fernández',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('606')->id,
+                'family_id' => Family::findByCode('ELECTRIC')->id,
+                'code' => '035'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'J.Luís Colomé Monllao',
+            'code' => '036',
+            'email' => 'jcolome@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'J.Luís',
+            'sn1' => 'Colomé',
+            'sn2' => 'Monllao',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('606')->id,
+                'family_id' => Family::findByCode('ELECTRIC')->id,
+                'code' => '036'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Angel Portillo Lucas',
+            'code' => '037',
+            'email' => 'angelportillo@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Angel',
+            'sn1' => 'Portillo',
+            'sn2' => 'Lucas',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('606')->id,
+                'family_id' => Family::findByCode('ELECTRIC')->id,
+                'code' => '037'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Anna	Valls	Montagut',
+            'code' => '064',
+            'email' => 'avalls@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Anna',
+            'sn1' => 'Valls',
+            'sn2' => 'Montagut',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('517')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '064'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Anna Benaiges Bertomeu',
+            'code' => '065',
+            'email' => 'anabenaiges@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Anna',
+            'sn1' => 'Benaiges',
+            'sn2' => 'Bertomeu',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('517')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '065'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Salomé	Figueres Brescolí',
+            'code' => '067',
+            'email' => 'salomefigueres@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Salomé',
+            'sn1' => 'Figueres',
+            'sn2' => 'Brescolí',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('517')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '067'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Pepa	Cugat	Tomàs',
+            'code' => '066',
+            'email' => 'pepacugat@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Pepa',
+            'sn1' => 'Cugat',
+            'sn2' => 'Tomàs',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('517')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '066'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Berta Safont Recatalà',
+            'code' => '062',
+            'email' => 'bertasafont@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Berta',
+            'sn1' => 'Safont',
+            'sn2' => 'Recatalà',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('518')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '062'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Mª Jesús	Sales Berire',
+            'code' => '060',
+            'email' => 'msales@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Mª Jesús',
+            'sn1' => 'Sales',
+            'sn2' => 'Berire',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('518')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '060'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Mª Luisa	Asensi Moltalva',
+            'code' => '061',
+            'email' => 'mariaasensi@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Mª Jesús',
+            'sn1' => 'Asensi',
+            'sn2' => 'Moltalva',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('518')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '061'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Santi López Garcia',
+            'code' => '063',
+            'email' => 'santiagolopez@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Santi',
+            'sn1' => 'López',
+            'sn2' => 'Garcia',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('518')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '063'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Lluis Ventura Forner',
+            'code' => '069',
+            'email' => 'lventura@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Lluis',
+            'sn1' => 'Ventura',
+            'sn2' => 'Forner',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('619')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '069'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'J.Antoni Pons Albalat',
+            'code' => '070',
+            'email' => 'jpons@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'J.Antoni',
+            'sn1' => 'Pons',
+            'sn2' => 'Albalat',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('619')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '070'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Alicia	Fàbrega	Martínez',
+            'code' => '071',
+            'email' => 'aliciafabrega@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Alicia',
+            'sn1' => 'Fàbrega',
+            'sn2' => 'Martínez',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('619')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '071'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Segis Benabent Gil',
+            'code' => '072',
+            'email' => 'sbenabent@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Segis',
+            'sn1' => 'Benabent',
+            'sn2' => 'Gil',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('619')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '072'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Sandra	Salvador Jovaní',
+            'code' => '068',
+            'email' => 'sandrasalvador@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Sandra',
+            'sn1' => 'Salvador',
+            'sn2' => 'Jovaní',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('619')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '068'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'MªJosé	Caballé	Valverde',
+            'code' => '074',
+            'email' => 'mcaballe@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'MªJosé',
+            'sn1' => 'Caballé',
+            'sn2' => 'Valverde',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('620')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '074'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Marisa	Ramón Pérez',
+            'code' => '073',
+            'email' => 'mramon@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Marisa',
+            'sn1' => 'Ramón',
+            'sn2' => 'Pérez',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('620')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '073'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Elisa Puig Moll',
+            'code' => '075',
+            'email' => 'epuig@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Elisa',
+            'sn1' => 'Puig',
+            'sn2' => 'Moll',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('620')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '075'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Ruth Hidalgo Vilar',
+            'code' => '076',
+            'email' => 'rhidalgo@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Ruth',
+            'sn1' => 'Hidalgo',
+            'sn2' => 'Vilar',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('620')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '076'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Anna	Sambartolomé Sancho',
+            'code' => '077',
+            'email' => 'annasambartolome@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Anna',
+            'sn1' => 'Sambartolomé',
+            'sn2' => 'Sancho',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('620')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '077'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Cinta Mestre Escrihuela',
+            'code' => '078',
+            'email' => 'cintamestre@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Cinta',
+            'sn1' => 'Mestre',
+            'sn2' => 'Escrihuela',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('620')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '078'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Trini Tomas Forcadell',
+            'code' => '080',
+            'email' => 'trinidadtomas@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Trini',
+            'sn1' => 'Tomas',
+            'sn2' => 'Forcadell',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('620')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '080'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Adonay Pérez López',
+            'code' => '081',
+            'email' => 'aperez@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Adonay',
+            'sn1' => 'Pérez',
+            'sn2' => 'López',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('620')->id,
+                'family_id' => Family::findByCode('SANITAT')->id,
+                'code' => '081'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Tarsi Royo Cruselles',
+            'code' => '082',
+            'email' => 'troyo@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Tarsi',
+            'sn1' => 'Royo',
+            'sn2' => 'Cruselles',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('508')->id,
+                'family_id' => Family::findByCode('SERVEIS')->id,
+                'code' => '082'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Iris Maturana Andreu',
+            'code' => '084',
+            'email' => 'irismaturana@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Iris',
+            'sn1' => 'Maturana',
+            'sn2' => 'Andreu',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('508')->id,
+                'family_id' => Family::findByCode('SERVEIS')->id,
+                'code' => '084'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Llatzer Cabó Bertomeu',
+            'code' => '085',
+            'email' => 'llatzercarbo@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Llatzer',
+            'sn1' => 'Cabó',
+            'sn2' => 'Bertomeu',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('508')->id,
+                'family_id' => Family::findByCode('SERVEIS')->id,
+                'code' => '085'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Mercè Gilo Ortiz',
+            'code' => '086',
+            'email' => 'mercegilo@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Mercè',
+            'sn1' => 'Gilo',
+            'sn2' => 'Ortiz',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('508')->id,
+                'family_id' => Family::findByCode('SERVEIS')->id,
+                'code' => '086'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Cristina Cardona Romero',
+            'code' => '087',
+            'email' => 'ccardona99@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Cristina',
+            'sn1' => 'Cardona',
+            'sn2' => 'Romero',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('625')->id,
+                'family_id' => Family::findByCode('SERVEIS')->id,
+                'code' => '087'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'David Gàmez Balaguer',
+            'code' => '088',
+            'email' => 'dgamez1@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'David',
+            'sn1' => 'Gàmez',
+            'sn2' => 'Balaguer',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('625')->id,
+                'family_id' => Family::findByCode('SERVEIS')->id,
+                'code' => '088'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Àngels Garrido Borja',
+            'code' => '089',
+            'email' => 'mgarrido2@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Àngels',
+            'sn1' => 'Garrido',
+            'sn2' => 'Borja',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('625')->id,
+                'family_id' => Family::findByCode('SERVEIS')->id,
+                'code' => '089'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Alicia Gamundi Vilà',
+            'code' => '090',
+            'email' => 'aliciagamundi@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Alicia',
+            'sn1' => 'Gamundi',
+            'sn2' => 'Vilà',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('625')->id,
+                'family_id' => Family::findByCode('SERVEIS')->id,
+                'code' => '090'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Ricard Gonzalez Castelló',
+            'code' => '091',
+            'email' => 'rgonzalez1@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Ricard',
+            'sn1' => 'Gonzalez',
+            'sn2' => 'Castelló',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('625')->id,
+                'family_id' => Family::findByCode('SERVEIS')->id,
+                'code' => '091'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Elena Mauri Cuenca',
+            'code' => '092',
+            'email' => 'elenamauri@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Elena',
+            'sn1' => 'Mauri',
+            'sn2' => 'Cuenca',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('625')->id,
+                'family_id' => Family::findByCode('SERVEIS')->id,
+                'code' => '092'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Irene Alegre Chavarria',
+            'code' => '093',
+            'email' => 'irenealegre@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Irene',
+            'sn1' => 'Alegre',
+            'sn2' => 'Chavarria',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('625')->id,
+                'family_id' => Family::findByCode('SERVEIS')->id,
+                'code' => '093'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Maria Castells Gilabert',
+            'code' => '108',
+            'email' => 'mariacastells1@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Irene',
+            'sn1' => 'Alegre',
+            'sn2' => 'Chavarria',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('625')->id,
+                'family_id' => Family::findByCode('SERVEIS')->id,
+                'code' => '108'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Oscar Samo Franch',
+            'code' => '014',
+            'email' => 'oscarsamo@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Oscar',
+            'sn1' => 'Samo',
+            'sn2' => 'Franch',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('501')->id,
+                'family_id' => Family::findByCode('ADMIN')->id,
+                'code' => '014'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Oscar Samo Franch',
+            'code' => '014',
+            'email' => 'oscarsamo@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Oscar',
+            'sn1' => 'Samo',
+            'sn2' => 'Franch',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('501')->id,
+                'family_id' => Family::findByCode('ADMIN')->id,
+                'code' => '014'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Enric Garcia Carcelén',
+            'code' => '015',
+            'email' => 'egarci@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Enric',
+            'sn1' => 'Garcia',
+            'sn2' => 'Carcelén',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('501')->id,
+                'family_id' => Family::findByCode('ADMIN')->id,
+                'code' => '015'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Eduard Ralda Simó',
+            'code' => '016',
+            'email' => 'eralda@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Eduard',
+            'sn1' => 'Ralda',
+            'sn2' => 'Simó',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('501')->id,
+                'family_id' => Family::findByCode('ADMIN')->id,
+                'code' => '016'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Pili Nuez Garcia',
+            'code' => '017',
+            'email' => 'mnuez@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Pili',
+            'sn1' => 'Nuez',
+            'sn2' => 'Garcia',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('501')->id,
+                'family_id' => Family::findByCode('ADMIN')->id,
+                'code' => '017'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'MªRosa Ubalde Bellot',
+            'code' => '018',
+            'email' => 'mariarosaubalde@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'MªRosa',
+            'sn1' => 'Ubalde',
+            'sn2' => 'Bellot',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('501')->id,
+                'family_id' => Family::findByCode('ADMIN')->id,
+                'code' => '018'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Paqui Pinyol Moreso',
+            'code' => '019',
+            'email' => 'fpinyol@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Paqui',
+            'sn1' => 'Pinyol',
+            'sn2' => 'Moreso',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('622')->id,
+                'family_id' => Family::findByCode('ADMIN')->id,
+                'code' => '019'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Dolors Subirats Fabra',
+            'code' => '020',
+            'email' => 'dsubirats@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Dolors',
+            'sn1' => 'Subirats',
+            'sn2' => 'Fabra',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('622')->id,
+                'family_id' => Family::findByCode('ADMIN')->id,
+                'code' => '020'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Ferran Sabaté Borras',
+            'code' => '021',
+            'email' => 'fsabate@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Ferran',
+            'sn1' => 'Sabaté',
+            'sn2' => 'Borras',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('622')->id,
+                'family_id' => Family::findByCode('ADMIN')->id,
+                'code' => '021'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Araceli Esteller Hierro',
+            'code' => '022',
+            'email' => 'aesteller@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Araceli',
+            'sn1' => 'Esteller',
+            'sn2' => 'Hierro',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('622')->id,
+                'family_id' => Family::findByCode('ADMIN')->id,
+                'code' => '022'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Mavi Santamaria Andreu',
+            'code' => '023',
+            'email' => 'mavisantamaria@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Mavi',
+            'sn1' => 'Santamaria',
+            'sn2' => 'Andreu',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('622')->id,
+                'family_id' => Family::findByCode('ADMIN')->id,
+                'code' => '023'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Agustí Moreso Garcia',
+            'code' => '024',
+            'email' => 'amoreso@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Agustí',
+            'sn1' => 'Moreso',
+            'sn2' => 'Garcia',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('510')->id,
+                'family_id' => Family::findByCode('COMERÇ')->id,
+                'code' => '024'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Carme Vega Guerra',
+            'code' => '025',
+            'email' => 'cvega@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Carme',
+            'sn1' => 'Vega',
+            'sn2' => 'Guerra',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('510')->id,
+                'family_id' => Family::findByCode('COMERÇ')->id,
+                'code' => '025'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Dolors Ferreres Gasulla',
+            'code' => '106',
+            'email' => 'dolorsferreres@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Dolors',
+            'sn1' => 'Ferreres',
+            'sn2' => 'Gasulla',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('510')->id,
+                'family_id' => Family::findByCode('COMERÇ')->id,
+                'code' => '106'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Juan Abad Bueno',
+            'code' => '107',
+            'email' => 'juandediosabad@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Juan',
+            'sn1' => 'Abad',
+            'sn2' => 'Bueno',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('510')->id,
+                'family_id' => Family::findByCode('COMERÇ')->id,
+                'code' => '107'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Just Pérez Santiago',
+            'code' => '026',
+            'email' => 'justperez@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Just',
+            'sn1' => 'Pérez',
+            'sn2' => 'Santiago',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('621')->id,
+                'family_id' => Family::findByCode('COMERÇ')->id,
+                'code' => '026'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Armand Pons Roda',
+            'code' => '027',
+            'email' => 'apons@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Armand',
+            'sn1' => 'Pons',
+            'sn2' => 'Roda',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('621')->id,
+                'family_id' => Family::findByCode('COMERÇ')->id,
+                'code' => '027'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Raquel Planell Tolos',
+            'code' => '105',
+            'email' => 'raquelplanell@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Armand',
+            'sn1' => 'Pons',
+            'sn2' => 'Roda',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('621')->id,
+                'family_id' => Family::findByCode('COMERÇ')->id,
+                'code' => '105'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Marta Grau Ferrer',
+            'code' => '094',
+            'email' => 'martagrau@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Marta',
+            'sn1' => 'Grau',
+            'sn2' => 'Ferrer',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('522')->id,
+                'family_id' => Family::findByCode('ARTS')->id,
+                'code' => '094'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Gerard Domenech Vendrell',
+            'code' => '095',
+            'email' => 'gerarddomenech@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Gerard',
+            'sn1' => 'Domenech',
+            'sn2' => 'Vendrell',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('623')->id,
+                'family_id' => Family::findByCode('ARTS')->id,
+                'code' => '095'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'J.Antonio Fernández Herraez',
+            'code' => '096',
+            'email' => 'joseantoniofernandez1@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'J.Antonio',
+            'sn1' => 'Fernández',
+            'sn2' => 'Herraez',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('623')->id,
+                'family_id' => Family::findByCode('ARTS')->id,
+                'code' => '096'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Monica Moreno Dionis',
+            'code' => '097',
+            'email' => 'monicamoreno@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Monica',
+            'sn1' => 'Moreno',
+            'sn2' => 'Dionis',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('621')->id,
+                'family_id' => Family::findByCode('ARTS')->id,
+                'code' => '097'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Santi Sabaté Sanz',
+            'code' => '038',
+            'email' => 'ssabate@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Santi',
+            'sn1' => 'Sabaté',
+            'sn2' => 'Sanz',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('507')->id,
+                'family_id' => Family::findByCode('INF')->id,
+                'code' => '038'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Jordi Varas Aliau',
+            'code' => '039',
+            'email' => 'jvaras@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Jordi',
+            'sn1' => 'Varas',
+            'sn2' => 'Aliau',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('507')->id,
+                'family_id' => Family::findByCode('INF')->id,
+                'code' => '039'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Sergi Tur Badenas',
+            'code' => '040',
+            'email' => 'stur@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Sergi',
+            'sn1' => 'Tur',
+            'sn2' => 'Badenas',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('507')->id,
+                'family_id' => Family::findByCode('INF')->id,
+                'code' => '040'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Jaume Ramos Prades',
+            'code' => '041',
+            'email' => 'jaumeramos@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Jaume',
+            'sn1' => 'Ramos',
+            'sn2' => 'Prades',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('507')->id,
+                'family_id' => Family::findByCode('INF')->id,
+                'code' => '041'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Quique Lorente Fuertes',
+            'code' => '046',
+            'email' => 'quiquelorente@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Quique',
+            'sn1' => 'Lorente',
+            'sn2' => 'Fuertes',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('507')->id,
+                'family_id' => Family::findByCode('INF')->id,
+                'code' => '046'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'A.Gonzalb Verge Arnau',
+            'code' => '117',
+            'email' => 'goncalverge@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'A.Gonzalb',
+            'sn1' => 'Verge',
+            'sn2' => 'Arnau',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('507')->id,
+                'family_id' => Family::findByCode('INF')->id,
+                'code' => '117'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Mireia Consarnau Pallarés',
+            'code' => '042',
+            'email' => 'mireiaconsarnau@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Mireia',
+            'sn1' => 'Consarnau',
+            'sn2' => 'ArPallarésnau',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('627')->id,
+                'family_id' => Family::findByCode('INF')->id,
+                'code' => '042'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Manel Macías Valanzuela',
+            'code' => '043',
+            'email' => 'manelmacias@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Manel',
+            'sn1' => 'Macías',
+            'sn2' => 'Valanzuela',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('627')->id,
+                'family_id' => Family::findByCode('INF')->id,
+                'code' => '043'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Josep Dieg Cervellera Forcadell',
+            'code' => '045',
+            'email' => 'josediegocervellera@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Josep Dieg',
+            'sn1' => 'Cervellera',
+            'sn2' => 'Forcadell',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('627')->id,
+                'family_id' => Family::findByCode('INF')->id,
+                'code' => '045'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'J.Luis Calderon Furió',
+            'code' => '051',
+            'email' => 'jcaldero@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'J.Luis',
+            'sn1' => 'Calderon',
+            'sn2' => 'Furió',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('512')->id,
+                'family_id' => Family::findByCode('FABRIC')->id,
+                'code' => '051'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Salvador Jareño Gas',
+            'code' => '052',
+            'email' => 'sjareno@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Salvador',
+            'sn1' => 'Jareño',
+            'sn2' => 'Gas',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('512')->id,
+                'family_id' => Family::findByCode('FABRIC')->id,
+                'code' => '052'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Jordi Brau Marza',
+            'code' => '053',
+            'email' => 'jordibrau@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Jordi',
+            'sn1' => 'Brau',
+            'sn2' => 'Marza',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('512')->id,
+                'family_id' => Family::findByCode('FABRIC')->id,
+                'code' => '053'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Joan Tiron Ferré',
+            'code' => '054',
+            'email' => 'jtiron@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Joan',
+            'sn1' => 'Tiron',
+            'sn2' => 'Ferré',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('611')->id,
+                'family_id' => Family::findByCode('FABRIC')->id,
+                'code' => '054'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Ricard Fernandez Burato',
+            'code' => '055',
+            'email' => 'rfernand@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Ricard',
+            'sn1' => 'Fernandez',
+            'sn2' => 'Burato',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('611')->id,
+                'family_id' => Family::findByCode('FABRIC')->id,
+                'code' => '055'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Ubaldo Arroyo Martínez',
+            'code' => '056',
+            'email' => 'ubaldoarroyo@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Ubaldo',
+            'sn1' => 'Arroyo',
+            'sn2' => 'Martínez',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('611')->id,
+                'family_id' => Family::findByCode('FABRIC')->id,
+                'code' => '056'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Fernando Segura Venezia',
+            'code' => '057',
+            'email' => 'fernandosegura@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Fernando',
+            'sn1' => 'Segura',
+            'sn2' => 'Venezia',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('611')->id,
+                'family_id' => Family::findByCode('FABRIC')->id,
+                'code' => '057'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Francesc Besalduch Piñol',
+            'code' => '058',
+            'email' => 'sbesalduch@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Francesc',
+            'sn1' => 'Besalduch',
+            'sn2' => 'Piñol',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('611')->id,
+                'family_id' => Family::findByCode('FABRIC')->id,
+                'code' => '058'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Manel Segarra Capera',
+            'code' => '059',
+            'email' => 'msegarra@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Manel',
+            'sn1' => 'Segarra',
+            'sn2' => 'Capera',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('611')->id,
+                'family_id' => Family::findByCode('FABRIC')->id,
+                'code' => '059'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Rosendo Ferri Marzo',
+            'code' => '049',
+            'email' => 'rosendoferri@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Rosendo',
+            'sn1' => 'Ferri',
+            'sn2' => 'Marzo',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('611')->id,
+                'family_id' => Family::findByCode('FABRIC')->id,
+                'code' => '049'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Jordi Sanchez Bel',
+            'code' => '050',
+            'email' => 'jordisanchez@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Jordi',
+            'sn1' => 'Sanchez',
+            'sn2' => 'Bel',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('611')->id,
+                'family_id' => Family::findByCode('FABRIC')->id,
+                'code' => '050'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Albert Rofí Estelles',
+            'code' => '047',
+            'email' => 'arofin@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Albert',
+            'sn1' => 'Rofí',
+            'sn2' => 'Estelles',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('504')->id,
+                'family_id' => Family::findByCode('EDIFIC')->id,
+                'code' => '047'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Pedro Guerrero López',
+            'code' => '048',
+            'email' => 'pedroguerrero@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Pedro',
+            'sn1' => 'Guerrero',
+            'sn2' => 'López',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('612')->id,
+                'family_id' => Family::findByCode('EDIFIC')->id,
+                'code' => '048'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Teresa Lasala Descarrega',
+            'code' => '009',
+            'email' => 'tlasala@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Teresa',
+            'sn1' => 'Lasala',
+            'sn2' => 'Descarrega',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('505')->id,
+                'family_id' => Family::findByCode('FOL')->id,
+                'code' => '009'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Carmina Andreu Pons',
+            'code' => '010',
+            'email' => 'candreu@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Carmina',
+            'sn1' => 'Andreu',
+            'sn2' => 'Pons',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('505')->id,
+                'family_id' => Family::findByCode('FOL')->id,
+                'code' => '010'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'J.Andrés Brocal Safont',
+            'code' => '011',
+            'email' => 'jbrocal@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'J.Andrés',
+            'sn1' => 'Brocal',
+            'sn2' => 'Safont',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('505')->id,
+                'family_id' => Family::findByCode('FOL')->id,
+                'code' => '011'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Pilar Fadurdo Estrada',
+            'code' => '012',
+            'email' => 'pilarfadurdo@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Pilar',
+            'sn1' => 'Fadurdo',
+            'sn2' => 'Estrada',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('505')->id,
+                'family_id' => Family::findByCode('FOL')->id,
+                'code' => '012'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Carlos Querol Bel',
+            'code' => '013',
+            'email' => 'carlosquerol@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Carlos',
+            'sn1' => 'Querol',
+            'sn2' => 'Bel',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('505')->id,
+                'family_id' => Family::findByCode('FOL')->id,
+                'code' => '013'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Marisa Grau Campeón',
+            'code' => '003',
+            'email' => 'cgrau@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Marisa',
+            'sn1' => 'Grau',
+            'sn2' => 'Campeón',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('505')->id,
+                'family_id' => Family::findByCode('FOL')->id,
+                'code' => '003'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Isabel Jordà Cabaces',
+            'code' => '004',
+            'email' => 'ijorda@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Isabel',
+            'sn1' => 'Jordà',
+            'sn2' => 'Cabaces',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('AN')->id,
+                'family_id' => Family::findByCode('CA')->id,
+                'code' => '004'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Enric Querol Coll',
+            'code' => '005',
+            'email' => 'equerol@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Enric',
+            'sn1' => 'Querol',
+            'sn2' => 'Coll',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('AN')->id,
+                'family_id' => Family::findByCode('CA')->id,
+                'code' => '005'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Lara Melich Cañado',
+            'code' => '006',
+            'email' => 'laramelich@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Lara',
+            'sn1' => 'Melich',
+            'sn2' => 'Cañado',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('AN')->id,
+                'family_id' => Family::findByCode('CA')->id,
+                'code' => '006'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Carme Aznar Pedret',
+            'code' => '007',
+            'email' => 'carmeaznar@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Carme',
+            'sn1' => 'Aznar',
+            'sn2' => 'Pedret',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('AN')->id,
+                'family_id' => Family::findByCode('CA')->id,
+                'code' => '007'
+            ])
+        );
+
+        User::createIfNotExists([
+            'name' => 'Julià Curto De la Vega',
+            'code' => '008',
+            'email' => 'jcurto@iesebre.com',
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'remember_token' => str_random(10),
+        ])->addRole(Role::findByName('Teacher'))
+        ->assignFullName(Name::firstOrCreate([
+            'givenName' => 'Julià',
+            'sn1' => 'Curto',
+            'sn2' => 'De la Vega',
+        ]))
+        ->assignStaff(
+            Staff::firstOrCreate([
+                'type_id' => StaffType::findByName('Professor/a')->id,
+                'specialty_id' => Specialty::findByCode('MA')->id,
+                'family_id' => Family::findByCode('CA')->id,
+                'code' => '008'
             ])
         );
         //TODO ->situation('D')->assignTeacherCode('002');
